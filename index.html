@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dom-events/src/style.css" />
+    <title>dom-events</title>
+</head>
+
+<body class="container dark-mode">
+    <!-- CODE FOR DARK MODE -->
+    <header>
+        <div>
+            <h1>Event-Labor</h1>
+            <p>Interaktive DOM-Manipulation mit Vanilla CSS</p>
+        </div>
+        <button id="theme-toggle" class="btn btn-outline" aria-pressed="false">
+            Dunkelmodus an
+        </button>
+    </header>
+
+    <main>
+        <!-- Sektion 1: Aufgaben -->
+        <section id="todo-bereich">
+            <h2>📝 Aufgaben-Planer</h2>
+            <div id="live-preview" class="preview-box" aria-live="polite">
+                Vorschau: —
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Was steht heute an?" />
+                <button id="add-btn" class="btn btn-primary">Hinzufügen</button>
+            </div>
+
+            <ul id="task-list" aria-label="Deine Aufgabenliste"></ul>
+            <div id="stats" class="status-msg"></div>
+        </section>
+
+        <!-- Sektion 2: Feedback -->
+    <section id="feedback-bereich">
+      <h2>📩 Feedback senden</h2>
+      <form id="feedback-form" novalidate>
+        <!-- novalidate, damit wir die Validierung selbst zeigen können -->
+        <div style="margin-bottom: 1rem;">
+          <label for="email" style="display:block; margin-bottom: 0.3rem;">Deine E-Mail
+            (Echtzeit-Check)</label>
+          <input type="email" id="email" required placeholder="name@beispiel.de"
+            style="width: 100%;">
+        </div>
+        <button type="submit" class="btn btn-primary">Absenden</button>
+      </form>
+      <div id="form-status" class="status-msg hidden" role="status">
+        Hier wird die Validierung angezeigt.
+      </div>
+    </section>
+
+    </main>
+
+
+    <script src="./dom-events/src/main.js"></script>
+</body>
+
+</html>
